@@ -47,3 +47,5 @@ class PersonStats extends Component {
 }
 
 export default PersonStats;
+
+// Make sure to create a new variable in your state under your constructor. Afterwards, assign a string using all of your other states in your submit funciton. Lastly, call that new function above your submit button to complete the classwork.
