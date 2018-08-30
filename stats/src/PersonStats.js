@@ -6,7 +6,8 @@ class PersonStats extends Component {
         super(props);
         this.state = {name: "",
                         age: "",
-                        feeling: ""}
+                        feeling: "",
+                        person: ""}
     }
 
     nameChange = (event) => {
@@ -22,8 +23,7 @@ class PersonStats extends Component {
     }
 
     submitFunction = (event) => {
-        console.log("Submitted Form");
-        alert("Hello")
+        this.setState({person:( "Hello " + this.state.name + "." + " Your age is: " + this.state.age + ", and you are feeling " + this.state.feeling)})
         event.preventDefault();
     }
 
@@ -40,6 +40,7 @@ class PersonStats extends Component {
                     <label htmlFor="feeling">Feeling: </label>
                     <input type="text" id="feeling" value={this.state.feeling} onChange={this.feelingChange}/>
                     <button>Submit</button>
+                    <p>{this.state.person}</p>
                 </form>
             </div>
     );
